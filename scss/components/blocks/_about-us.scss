@@ -1,0 +1,30 @@
+.team {
+   margin-top: 80px;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-right: -40px;
+   margin-left: -40px;
+   .card {
+      flex: 0 0 340px;
+      box-shadow: none;
+      border: none;
+      margin-bottom: 20px;
+      padding: 20px 40px;
+      text-align: center;
+   }
+}
+@media screen and (max-width: 767px) {
+   .team {
+      margin-top: 40px;
+   }
+}
+@media screen and (max-width: 575px) {
+   .team {
+      margin-right: 0;
+      margin-left: 0;
+      .card {
+         flex: 0 0 100%;
+         padding: 20px;
+      }
+   }
+}

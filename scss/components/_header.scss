@@ -1,0 +1,124 @@
+.body-with-admin-bar {
+   .sidenav {
+      top: 32px;
+   }
+}
+.header {
+   line-height: 90px;
+   border-bottom: 1px solid #cfcfcf;
+   background-color: #fff;
+   z-index: 999;
+   position: relative;
+   width: 100%;
+   .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+   .burger {
+      display: none;
+      padding-right: 15px;
+      width: 40px;
+      height: 22px;
+      flex-direction: column;
+      justify-content: space-between;
+      > span {
+         display: block;
+         border-bottom: 3px solid $active;
+      }
+   }
+   &__logo {
+      display: inline-block;
+      width: 57px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+         vertical-align: middle;
+      }
+   }
+   &__menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      ul {
+         display: flex;
+         align-items: center;
+         li {
+            margin-right: 40px;
+            a {
+               font-weight: 500;
+               display: block;
+               height: 100%;
+               &:hover {
+                  color: $active;
+               }
+            }
+         }
+      }
+   }
+   .brand-btn {
+      font-size: 16px;
+      line-height: 36px;
+      font-weight: bold;
+      min-width: auto;
+      margin-left: 80px;
+   }
+}
+.header-transparent {
+   border-bottom: none;
+   background-color: transparent;
+   .burger {
+      padding: 5px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      width: 45px;
+      height: 32px;
+   }
+   .header__menu {
+      #menu-header-menu {
+         background-color: rgba(255, 255, 255, 0.8);
+         padding-left: 15px;
+         padding-right: 15px;
+      }
+      .btn-transparent {
+         background-color: rgba(255, 255, 255, 0.8);
+      }
+   }
+}
+.current-menu-item {
+   a {
+      color: $active;
+   }
+}
+@media screen and (max-width: 992px) {
+   .header {
+      .burger {
+         display: flex;
+      }
+      &__menu {
+         ul {
+            display: none;
+         }
+      }
+      .brand-btn {
+         margin-left: 15px;
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .body-with-admin-bar {
+      .sidenav {
+         top: 46px;
+      }
+   }
+}
+@media screen and (max-width: 600px) {
+   #wpadminbar {
+      position: fixed !important;
+   }
+}
+@media screen and (max-width: 575px) {
+   .header {
+   }
+}

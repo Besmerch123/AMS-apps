@@ -1,0 +1,49 @@
+.portfolio-heading {
+    min-height: 80vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0 calc(5vw + 25px) 0;
+    overflow: hidden;
+    &__bg {
+        position: absolute;
+        width: 1596px;
+        height: 1833px;
+        left: -775px;
+        top: -990px;
+        transform: matrix(0.57, -0.82, -0.82, -0.57, 0, 0);
+        z-index: -10;
+    }
+    &__title {
+        font-weight: 500;
+        @include adaptiv-font(48px, 36px);
+        line-height: 1.3em;
+        color: $text !important;
+        margin-bottom: 0.6em;
+    }
+    &__text {
+        max-width: 780px;
+        font-size: 24px;
+        @include adaptiv-font(24, 18);
+        line-height: 1.5em;
+    }
+}
+@media screen and (max-width: 992px) {
+    .portfolio-heading {
+        min-height: 70vh;
+        &__bg {
+            left: -630px;
+        }
+    }
+}
+@media screen and (max-width: 575px) {
+    .portfolio-heading {
+        min-height: 60vh;
+        &__bg {
+            left: -680px;
+            top: -1050px;
+        }
+    }
+}

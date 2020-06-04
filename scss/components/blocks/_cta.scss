@@ -1,0 +1,31 @@
+.cta {
+   background-image: url(../images/cta-bg.png);
+   background-repeat: no-repeat;
+   background-size: 1596px 1833px;
+   background-position-x: -550px;
+   background-position-y: -790px;
+   &__content {
+      max-width: 650px;
+      margin-left: auto;
+      padding: calc(5.2vw + 50px) 0;
+   }
+   &__title {
+      font-weight: 500;
+      @include adaptiv-font(44, 32);
+      line-height: 1.1em;
+      color: #ffffff !important;
+      margin-bottom: 0.4em;
+   }
+   &__text {
+      @include adaptiv-font(24, 18);
+      line-height: 1.3em !important;
+      color: #ffffff !important;
+      margin-bottom: 1.7em;
+   }
+}
+@media screen and (max-width: 992px) {
+   .cta {
+      background-position-x: -750px;
+      background-position-y: -950px;
+   }
+}

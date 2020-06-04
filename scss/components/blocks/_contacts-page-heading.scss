@@ -1,0 +1,20 @@
+.contacts-heading {
+    padding-top: calc(9vw + 30px);
+    padding-bottom: 4vw;
+    * {
+        @include adaptiv-font(24, 18);
+        line-height: 1.3em;
+        text-align: center;
+        color: rgba(62, 52, 101, 0.6);
+    }
+    a {
+        color: $text;
+    }
+    &__title {
+        font-weight: 500;
+        @include adaptiv-font(48, 36);
+        line-height: 1.2em;
+        color: $text;
+        margin-bottom: 1.25em;
+    }
+}

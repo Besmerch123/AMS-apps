@@ -1,0 +1,105 @@
+.main-cases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    padding-bottom: 25px;
+    .case {
+        &__img-wrap {
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                padding-top: 54%;
+            }
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__caption {
+            padding: 40px;
+        }
+        &__tags {
+            .tag {
+                display: inline-block;
+                font-size: 18px;
+                line-height: 41px;
+                color: $text;
+                background-color: rgba(199, 207, 255, 0.2);
+                border-radius: 40px;
+                padding: 0 24px;
+                margin: 0 20px 20px 0;
+            }
+        }
+        &__title {
+            font-weight: 500;
+            @include adaptiv-font(24, 20);
+            color: $text;
+            margin-bottom: 1.6em;
+        }
+        &__description {
+            @include adaptiv-font(24, 16);
+            line-height: 1.1em;
+            margin-bottom: 1.6em;
+        }
+    }
+}
+.all-cases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 75px;
+    padding: 50px 0;
+    .case {
+        &__img-wrap {
+            height: 60px;
+            margin-bottom: 30px;
+            position: relative;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 20px;
+            margin-bottom: 0.75em;
+        }
+        &__description {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .all-cases {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .main-cases {
+        grid-template-columns: 1fr;
+        .case {
+            &__caption {
+                padding: 15px;
+            }
+        }
+    }
+    .all-cases {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 575px) {
+    .all-cases {
+        grid-template-columns: 1fr;
+    }
+}

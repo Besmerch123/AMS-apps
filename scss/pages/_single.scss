@@ -1,0 +1,33 @@
+.single,
+.edit-post-visual-editor {
+    * {
+        color: $text-dark;
+    }
+    h2 {
+        font-weight: 500;
+        @include adaptiv-font(36, 28);
+        line-height: 1.2em;
+        margin-bottom: 0.8em;
+    }
+    h3 {
+        @include adaptiv-font(32, 24);
+        line-height: normal;
+        font-weight: 500;
+        margin-bottom: 0.9em;
+    }
+    h4 {
+        @include adaptiv-font(24, 20);
+        line-height: normal;
+        font-weight: 500;
+        margin-bottom: 0.8em;
+    }
+    p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+}
+.single-post {
+    .alignwide {
+        max-width: 760px;
+    }
+}

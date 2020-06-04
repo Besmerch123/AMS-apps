@@ -1,0 +1,38 @@
+//materialize
+@import "./materialize/materialize";
+
+//Slick
+@import "./slick";
+
+//Components
+@import "./components/common";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/ideas";
+
+//Blocks
+@import "./components/blocks/hero";
+@import "./components/blocks/why-us";
+@import "./components/blocks/columns";
+@import "./components/blocks/companies";
+@import "./components/blocks/workflow";
+@import "./components/blocks/testimonials";
+@import "./components/blocks/trust-us";
+@import "./components/blocks/about-us";
+@import "./components/blocks/cta";
+@import "./components/blocks/cases";
+@import "./components/blocks/contacts-page-heading";
+@import "./components/blocks/portfolio-page-heading";
+@import "./components/blocks/stores-buttons";
+@import "./components/blocks/store-testimonials";
+@import "./components/blocks/case-testimonial";
+@import "./components/blocks/featured-projects";
+@import "./components/blocks/app-images";
+@import "./components/blocks/process";
+@import "./components/blocks/hiring";
+@import "./components/blocks/ams-author";
+
+//Pages
+@import "./pages/blog";
+@import "./pages/portfolio";
+@import "./pages/single";

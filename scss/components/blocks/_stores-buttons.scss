@@ -1,0 +1,34 @@
+.stores-buttons {
+   margin-bottom: calc(1.5vw + 25px);
+   .icon-wrap {
+      height: 80px;
+      margin-bottom: 40px;
+      img {
+         height: 100%;
+      }
+   }
+   .buttons {
+      a {
+         display: inline-block;
+         height: 40px;
+         margin-right: 20px;
+         margin-bottom: 20px;
+         img {
+            height: 100%;
+         }
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .stores-buttons {
+      .icon-wrap {
+         margin-bottom: 20px;
+      }
+      .buttons {
+         a {
+            margin-right: 10px;
+            margin-bottom: 10px;
+         }
+      }
+   }
+}

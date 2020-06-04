@@ -1,0 +1,117 @@
+footer {
+   h5 {
+      font-weight: 500;
+      @include adaptiv-font(18, 16);
+      line-height: 1.1em;
+      margin-bottom: 1.2em;
+   }
+   p {
+      font-size: 16px !important;
+      line-height: 1.2em;
+      opacity: 0.8;
+      color: $text;
+   }
+   .container {
+      text-align: left;
+   }
+   .copyright {
+      flex: 0 3 460px;
+      padding-right: 15px;
+      min-width: 320px;
+      .social {
+         margin-top: 45px;
+         a {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-right: 20px;
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+            }
+            &:hover {
+               animation: pulse 1s infinite;
+            }
+         }
+      }
+   }
+   .footer-nav {
+      flex: 0 1 310px;
+      ul {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         column-gap: 20px;
+         a {
+            display: block;
+            padding-bottom: 1em;
+            opacity: 0.8;
+            transition: all 0.3s;
+            &:hover {
+               opacity: 1;
+               transition: all 0.3s;
+            }
+         }
+      }
+   }
+   .footer-contacts {
+      flex: 0 1 300px;
+      .wysiwyg-styles {
+         p {
+            margin-bottom: 1em;
+         }
+      }
+   }
+   .reviews {
+      flex: 0 1 180px;
+      display: flex;
+      align-items: flex-end;
+      a {
+         display: block;
+         img {
+            width: 100%;
+            height: 1000%;
+            object-fit: contain;
+         }
+      }
+   }
+}
+@media screen and (max-width: 1024px) {
+   footer {
+      .container {
+         flex-wrap: wrap;
+      }
+      .copyright {
+         flex: 0 0 50%;
+         margin-bottom: 25px;
+      }
+      .footer-nav {
+         flex: 0 0 50%;
+         margin-bottom: 25px;
+      }
+      .footer-contacts {
+         flex: 0 0 50%;
+         margin-bottom: 25px;
+      }
+      .reviews {
+         flex: 0 0 50%;
+         margin-bottom: 25px;
+      }
+   }
+}
+@media screen and (max-width: 575px) {
+   footer {
+      .copyright {
+         flex: 0 0 100%;
+      }
+      .footer-nav {
+         flex: 0 0 100%;
+      }
+      .footer-contacts {
+         flex: 0 0 100%;
+      }
+      .reviews {
+         flex: 0 0 100%;
+      }
+   }
+}

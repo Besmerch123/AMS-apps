@@ -1,0 +1,46 @@
+.app-images {
+   justify-content: center;
+   display: flex;
+   overflow-x: auto;
+   &::-webkit-scrollbar {
+      height: 7px;
+   }
+   &::-webkit-scrollbar-track {
+      margin-bottom: -10px;
+      background-color: #fff;
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: $active;
+      border-radius: 5px;
+   }
+   .img-wrap {
+      border-radius: 0 0 20px 20px;
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 295px;
+      position: relative;
+      &::before {
+         content: "";
+         display: block;
+         padding-top: 150%;
+      }
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: contain;
+         position: absolute;
+         left: 0;
+         top: 0;
+      }
+   }
+}
+@media screen and (max-width: 992px) {
+   .app-images {
+      justify-content: flex-start;
+      padding-bottom: 15px;
+      .img-wrap {
+         width: auto;
+         flex: 0 0 145px;
+      }
+   }
+}

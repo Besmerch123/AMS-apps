@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+$maxWidth: 1920;
+@mixin adaptiv-font($pcSize, $mobSize) {
+   $addSize: $pcSize - $mobSize;
+   $maxWidth: $maxWidth - 320;
+   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})) !important;
+}
+* {
+   font-family: "Roboto", sans-serif;
+   margin: 0;
+}
+//General settings
+body {
+   overflow-x: hidden;
+   &::-webkit-scrollbar {
+      width: 10px;
+   }
+   &::-webkit-scrollbar-track {
+      background-color: #fff;
+   }
+   &::-webkit-scrollbar-thumb {
+      background-color: $active;
+      border-radius: 10px;
+   }
+}
+.block-editor-editor-skeleton__content {
+   overflow-x: hidden;
+}
+.wp-block {
+   max-width: 100%;
+}
+.front button:focus {
+   background-color: unset;
+}
+.text-lighter {
+   color: $text !important;
+   opacity: 0.6;
+}
+.text-darker {
+   color: $text !important;
+   opacity: 0.8;
+}
+a {
+   transition: all 0.3s;
+   &:hover {
+      opacity: 1;
+      transition: all 0.3s;
+   }
+}
+p {
+   font-size: 16px;
+   line-height: 26px;
+   margin-bottom: 2.5em;
+   color: $text-dark;
+   a {
+      transition: all 0.3s;
+      &:hover {
+         opacity: 1;
+         transition: all 0.3s;
+      }
+   }
+}
+h1 {
+   @include adaptiv-font(48, 36);
+   font-weight: 500;
+   line-height: 1.2em;
+}
+button {
+   outline: none;
+   &:focus {
+      outline: none;
+   }
+}
+.section {
+   padding: 5vw 0;
+}
+.container,
+.alignwide {
+   position: relative;
+   max-width: 1330px;
+   width: 100%;
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+.wp-block-group__inner-container {
+   margin-right: -15px;
+   margin-left: -15px;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+.flex {
+   display: flex;
+}
+.reletive {
+   position: relative;
+}
+input[type="submit"] {
+   border: none;
+   cursor: pointer;
+   &:focus {
+      border: none;
+      outline: none;
+   }
+}
+.media-frame-title h1 {
+   font-size: 22px !important;
+}
+//common elements
+.section-title {
+   color: $text !important;
+   @include adaptiv-font(44, 26);
+   line-height: 1em !important;
+   margin-bottom: 30px !important;
+   text-align: center;
+   font-weight: 500;
+}
+.section-subtitle {
+   color: $text !important;
+   @include adaptiv-font(24, 18);
+   line-height: 1.1em !important;
+   text-align: center;
+}
+.subtext {
+   @include adaptiv-font(20, 16);
+   line-height: 1.3em;
+   color: $text;
+   margin-bottom: 30px;
+}
+.post-heading {
+   padding: calc(3vw + 20px) 0 3vw 0;
+}
+.brand-bg {
+   background-color: $brand-bg;
+}
+.brand-btn {
+   display: inline-block;
+   border-radius: 10px;
+   text-align: center;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 48px;
+   color: #fff !important;
+   background-color: $active;
+   padding-right: 2.5em;
+   padding-left: 2.5em;
+   min-width: 250px;
+}
+.btn-transparent {
+   border: 2px solid #b9c3ff;
+   background-color: transparent;
+   color: $active !important;
+}
+.active-bg {
+   background-color: $active;
+   .btn-transparent {
+      color: #fff !important;
+      border-color: #fff;
+   }
+}
+.video {
+   border-radius: 20px;
+   position: relative;
+   background: #120e21;
+   z-index: 1;
+   width: 100%;
+   &::before {
+      content: "";
+      display: block;
+      padding-top: 65%;
+   }
+   .placeholder {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      opacity: 0.57;
+      z-index: -1;
+   }
+   .play-btn {
+      display: inline-block;
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: calc(50% - 25px);
+      top: calc(50% - 25px);
+      cursor: pointer;
+      &:hover {
+         animation: pulse 0.7s infinite;
+      }
+   }
+   iframe {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+   }
+}
+.card {
+   box-shadow: 0px 0px 24px rgba(101, 121, 244, 0.08);
+   border-radius: 20px;
+   border: none;
+   padding: 25px;
+   margin: 0;
+   .icon-bg-wrap {
+      margin-top: 20px;
+   }
+   .author {
+      margin-bottom: 25px;
+      .avatar {
+         width: 100px;
+         height: 100px;
+         border-radius: 50%;
+         margin: 0 auto 25px auto;
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+         }
+      }
+      &__name {
+         color: $text !important;
+         margin-bottom: 8px;
+         font-weight: 500;
+         font-size: 24px;
+         line-height: 28px;
+      }
+      &__specs {
+         color: $text !important;
+         font-size: 18px;
+         line-height: 21px;
+         opacity: 0.8;
+      }
+   }
+   &__title {
+      color: $text !important;
+      margin-top: 1.5em;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+   }
+
+   &__content {
+      margin-top: 1em;
+      color: $text !important;
+      font-size: 16px;
+      line-height: 21px;
+   }
+   &:focus {
+      outline: none;
+   }
+}
+.icon-bg-wrap {
+   background-color: $brand-bg;
+   padding: 10px;
+   border-radius: 10px;
+   display: inline-block;
+}
+.icon {
+   width: 38px;
+   height: 38px;
+   object-fit: contain;
+}
+.slick-list {
+   overflow: hidden;
+}
+.controls {
+   position: relative;
+   bottom: -40px;
+   .custom-slick-arrow {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+   }
+   .prev {
+      &::after {
+         content: "|";
+         margin: 0 17px 0 20px;
+      }
+   }
+}
+.ajax-loader {
+   width: 50px !important;
+   height: 50px !important;
+   background-image: url(../images/preloader.gif) !important;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   position: absolute;
+}
+div.wpcf7-response-output {
+   text-align: center;
+   color: $text;
+   line-height: 40px;
+   border-width: 1px !important;
+   border-radius: 20px;
+}
+div.wpcf7-mail-sent-ok {
+   border: 1px solid;
+}
+@media screen and (max-width: 767px) {
+   .section {
+      padding: 10vw 0;
+   }
+}
+@media screen and (max-width: 575px) {
+   .brand-btn {
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+   }
+   .section {
+      padding: 12vw 0;
+   }
+}

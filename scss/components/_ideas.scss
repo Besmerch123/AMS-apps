@@ -1,0 +1,44 @@
+.ideas {
+   position: relative;
+   overflow: hidden;
+   text-align: right;
+   .container {
+      z-index: 25;
+      text-align: left;
+   }
+   &.cta {
+      background-position-x: calc(100% + 610px);
+      background-position-y: center;
+   }
+   &__image {
+      position: absolute;
+      max-width: 650px;
+      height: 160%;
+      object-fit: contain;
+      right: 0;
+      top: -10px;
+   }
+   .cta__content {
+      margin-left: unset;
+      padding: 10vw 0;
+   }
+}
+@media screen and (max-width: 1024px) {
+   .ideas {
+      .cta__content {
+         max-width: 50%;
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .ideas {
+      &__image {
+         position: relative;
+         max-height: 400px;
+      }
+      .cta__content {
+         padding: 5px 0 10vw 0;
+         max-width: 100%;
+      }
+   }
+}
