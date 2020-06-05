@@ -7751,6 +7751,51 @@ footer .reviews a img {
   object-fit: contain;
 }
 
+.most-viewed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: calc(1.5vw + 25px);
+  margin-top: 1.5vw;
+  margin-bottom: 3vw;
+}
+
+.most-viewed .post__image-wrap::before {
+  content: "";
+  display: block;
+  padding-top: 65%;
+}
+
+.most-viewed .post__image-wrap img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border-radius: 20px !important;
+}
+
+.most-viewed .post__image-wrap .category-badges {
+  top: 20px !important;
+  right: 15px !important;
+}
+
+.most-viewed .post__caption {
+  padding: 20px 0 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .most-viewed {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .most-viewed {
+    grid-template-columns: 1fr;
+  }
+}
+
 .blog-page {
   padding-top: calc(5vw + 20px);
 }

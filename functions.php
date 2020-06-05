@@ -345,6 +345,17 @@ function ams_blocks()
          'keywords'         => array('author'),
          'post_types' => array('post', 'case'),
       ));
+      //Most viewed
+      acf_register_block(array(
+         'name'            => 'most-viewed',
+         'title'            => 'Most viewed posts',
+         'description'      => 'Most viewed posts block',
+         'render_callback'   => 'blocks_render_callback',
+         'category'         => 'ams',
+         'icon'            => 'visibility',
+         'keywords'         => array('most viewed'),
+         'post_types' => array('post'),
+      ));
    }
 }
 

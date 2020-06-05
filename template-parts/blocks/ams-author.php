@@ -16,7 +16,9 @@ $socials = get_field('social_link');
    <img src="<?= $avatar ?>" class="avatar">
    <div class="summary">
       <span class="author-name"><?= $authorName ?></span>
-      <span class="summary__text"> <?= $post_date ?> / <?php do_action('pageviews') ?> views</span>
+      <span class="summary__text"> <?= $post_date ?> / <?php if (function_exists('the_views')) {
+                                                            the_views();
+                                                         } ?></span>
    </div>
    <?php if (!empty($socials)) : ?>
       <div class="socials">
